@@ -1,0 +1,41 @@
+.choosingBtn{
+  padding: 10px;
+  color: black;
+  text-shadow: 1px 1px 10px #666;
+  background: none;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Lato',sans-serif;
+  font-size: 2.1em;
+  cursor: pointer;
+  transition: all 0.4s;
+  background: rgba(11,11,11,0.1);
+  margin: 5px auto;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+button[class="choosingBtn"]:hover{
+  box-shadow: 2px 2px 4px #111;
+}
+.changeSlideBtn{
+  width: 4em;
+  height: 4em;
+  font-size: 2em;
+  padding: 10px;
+  font-family: 'Lato',sans-serif;
+  border: none;
+  border-radius: 50%;
+  background: rgba(111,150,160,.5);
+  cursor: pointer;
+  transition: all 0.6s;
+  margin-top: 200px;
+}
+#previousSite{
+  margin-right: 20%;
+}
+#nextSite{
+  margin-left: 20%;
+}
+button[class="changeSlideBtn"]:hover{
+  filter: brightness(60%);
+}

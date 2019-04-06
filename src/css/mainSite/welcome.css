@@ -1,0 +1,29 @@
+.welcome-header{
+  font-size: 2em;
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  float: left;
+  margin-top: 30px;
+}
+.welcome-quotation-container{
+  width: calc(100% - 100px);
+  float: left;
+  margin-right: 100px;
+  text-align: right;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-family: 'Lato',sans-serif;
+}
+.welcome-quotation{
+  font-style: italic;
+}
+.welcome-quotation-speech{
+  width: 100%;
+  float: left;
+  text-align: center;
+  font-size: 1.4em;
+  font-family: Arial;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}

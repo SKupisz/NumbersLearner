@@ -1,19 +1,10 @@
 import React from 'react';
-var alpha = [
-  ["zero", "zero", "null", "zero", "zéro"],
-  ["jeden", "one", "eins", "uno", "un"],
-  ["dwa","two","zwei","dos","deux"],
-  ["trzy","three","drei","tres","trois"],
-  ["cztery","four","vier","quattro","quattre"],
-  ["pięć", "five","fünf","cinque","cinque"],
-  ["sześć","six","sechs","sei","six"],
-  ["siedem","seven","sieben","sette","sept"],
-  ["osiem", "eight", "acht", "otto", "huit"],
-  ["dziewięć", "nein", "neun", "nove", "neuf"],
-  ["dziesięć", "ten", "zehn", "dieci", "dix"]
-];
+import support from "./browserSupport.js";
+
+let alpha = support.numberSupport;
+
 let numbers = [];
-for(var i = 0 ; i < alpha.length; i++){
+for(var i = 0 ; i < 11; i++){
   numbers = numbers.concat([i]);
   numbers = numbers.concat(alpha[i]);
 }
@@ -21,14 +12,19 @@ let languageList = numbers.map((language) => <div class="responseDiv">{language}
 function search() {
   let numeric = document.getElementById("number").value;
   let table = alpha[numeric];
-  numbers = [numeric];
-  numbers = numbers.concat(table);
-  languageList = "";
-  for(var i = 0 ; i < numbers.length; i++)
+  var numericTest = parseInt(numeric);
+  if(numericTest == numeric)
   {
-    languageList+="<div class = 'response'>"+numbers[i]+"</div>";
+    numbers = [numeric];
+    numbers = numbers.concat(table);
+    languageList = "";
+    for(var i = 0 ; i < numbers.length; i++)
+    {
+      languageList+="<div class = 'response'>"+numbers[i]+"</div>";
+    }
+    document.querySelector(".responseContentMain").innerHTML = languageList;
   }
-  document.querySelector(".responseContentMain").innerHTML = languageList;
+
 }
 
 class Browser extends React.Component{
@@ -36,8 +32,16 @@ class Browser extends React.Component{
     languageList = numbers.map((language) => <div class="response">{language}</div>);
     return (
       <div class = "container">
+      <header class = "welcome-header">Witaj na NumbersLearner</header>
+      <section class = "welcome-quotation-container">
+      <q class = "welcome-quotation">Najważniejsze w uczeniu się jest pozytywne nastawienie</q>
+      - Bobbi DePorter
+      </section>
+      <article class = "welcome-quotation-speech">
+      Nie pamiętasz, jak zapisać słownie jakąś liczbę? Bez obaw! Postaramy się tobie pomóc przez naszą wyszukiwarkę liczb.
+      </article>
       <div class="browserContainer">
-        <input type="number" name="Number" min="0" max = "10" id = "number" class="numberBrowser" onInput={search}/>
+        <input type="number" name="Number" min="0" max = "13" id = "number" class="numberBrowser" onInput={search}/>
       </div>
       <div class = "resultContainer">
       <div class = "response main">
