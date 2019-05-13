@@ -9,6 +9,8 @@ import Browser from "./components/browser.jsx";
 import About from "./components/about.jsx";
 import Languages from "./components/languages.jsx";
 import "./css/styles.css";
+//<Link to = "/tutorial" className = "app-nav-tutorial">Languages tutorials</Link>
+//<Route path = "/tutorial" component = {Languages}/>
 function App() {
   return (
     <Router>
@@ -16,13 +18,13 @@ function App() {
       <nav class = "app-nav">
       <Link to = "/" className = "app-nav-mainsite">NumbersLearner</Link>
       <Link to = "/about" className = "app-nav-about">About us</Link>
-      <Link to = "/tutorial" className = "app-nav-tutorial">Languages tutorials</Link>
+
       <section class = "app-nav-searcher">
       </section>
       </nav>
       <Route exact path="/" component = {Browser}/>
       <Route path = "/about" component = {About}/>
-      <Route path = "/tutorial" component = {Languages}/>
+
     </div>
     </Router>
   );
