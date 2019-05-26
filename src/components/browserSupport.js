@@ -13,7 +13,15 @@ var support = {
   ["dziesięć", "ten", "zehn", "dieci", "dix"],
   ["jedenaście","eleven","elf","undici","onze"],
   ["dwanaście","twelve","zwölf","dodici","douze"],
-  ["trzynaście","thriteen","dreizehn","tredici","treize"]
+  ["trzynaście","thriteen","dreizehn","tredici","treize"],
+  ["czternaście","fourteen","vierzehn","quattordici","quatorze"],
+  ["piętnaście","fifteen","funfzehn","quindici","quinze"],
+  ["szesnaście","sixteen","sechzehn","sedici","seize"],
+  ["siedemnaście","seventeen","siebzehn","diciassette","dix-sept"],
+  ["osiemnaście","eightteen","achtzehn","diciotto","dix-huit"],
+  ["dziewiętnaście","neinteen","neunzehn","diciannove","dix-neuf"],
+  ["dwadzieścia","twenty","dzwanzig","venti","vingt"],
+  ["dwadzieścia jeden","twenty one","einunddzwanzig","ventuno","vingt et un"]
 ]};
 
 export default support;

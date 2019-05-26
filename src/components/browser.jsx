@@ -41,7 +41,7 @@ class Browser extends React.Component{
       Nie pamiętasz, jak zapisać słownie jakąś liczbę? Bez obaw! Postaramy się tobie pomóc przez naszą wyszukiwarkę liczb.
       </article>
       <div class="browserContainer">
-        <input type="number" name="Number" min="0" max = "13" id = "number" class="numberBrowser" onInput={search}/>
+        <input type="number" name="Number" min="0" max = "21" id = "number" class="numberBrowser" onInput={search}/>
       </div>
       <div class = "resultContainer">
       <div class = "response main">
